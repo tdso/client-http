@@ -1,0 +1,108 @@
+{
+  "openapi" : "3.0.3",
+  "info" : {
+    "title" : "leilao API",
+    "version" : "1.0.0-SNAPSHOT"
+  },
+  "paths" : {
+    "/leilao" : {
+      "get" : {
+        "tags" : [ "Leilao Resource" ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "array",
+                  "items" : {
+                    "$ref" : "#/components/schemas/ItemLeilao"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post" : {
+        "tags" : [ "Leilao Resource" ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/ItemDto"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "content" : {
+              "text/plain" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "ItemDto" : {
+        "type" : "object",
+        "properties" : {
+          "nomeItem" : {
+            "type" : "string"
+          },
+          "valorRef" : {
+            "format" : "double",
+            "type" : "number"
+          },
+          "valorMin" : {
+            "format" : "double",
+            "type" : "number"
+          },
+          "idCliente" : {
+            "format" : "int64",
+            "type" : "integer"
+          }
+        }
+      },
+      "ItemLeilao" : {
+        "type" : "object",
+        "properties" : {
+          "idItem" : {
+            "format" : "int64",
+            "type" : "integer"
+          },
+          "nomeItem" : {
+            "type" : "string"
+          },
+          "valorRef" : {
+            "format" : "double",
+            "type" : "number"
+          },
+          "valorMin" : {
+            "format" : "double",
+            "type" : "number"
+          },
+          "idCliente" : {
+            "format" : "int64",
+            "type" : "integer"
+          }
+        }
+      }
+    },
+    "securitySchemes" : {
+      "SecurityScheme" : {
+        "type" : "http",
+        "description" : "Authentication",
+        "scheme" : "basic"
+      }
+    }
+  }
+}

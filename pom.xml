@@ -23,6 +23,27 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/io.swagger/swagger-parser -->
+    <dependency>
+      <groupId>io.swagger.parser.v3</groupId>
+      <artifactId>swagger-parser</artifactId>
+      <version>2.1.16</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/io.swagger/swagger-models -->
+<!--    <dependency>-->
+<!--      <groupId>io.swagger</groupId>-->
+<!--      <artifactId>swagger-models</artifactId>-->
+<!--      <version>1.6.11</version>-->
+<!--    </dependency>-->
+
+    <!-- https://mvnrepository.com/artifact/io.swagger.core.v3/swagger-models -->
+    <dependency>
+      <groupId>io.swagger.core.v3</groupId>
+      <artifactId>swagger-models</artifactId>
+      <version>2.2.16</version>
+    </dependency>
+
     <dependency>
       <groupId>com.google.code.gson</groupId>
       <artifactId>gson</artifactId>
